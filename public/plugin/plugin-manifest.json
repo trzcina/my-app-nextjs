@@ -1,0 +1,14 @@
+{
+  "id": "flotiq.content-publishing---draft",
+  "name": "Content Preview MR",
+  "description": "The plugin generates links that let you open drafts and public versions of pages directly from the editor. With one click, users can quickly save and open the draft version, streamlining their workflow for maximum efficiency. It works best with Next.js-based sites that use draft mode.",
+  "version": "0.2.0",
+  "repository": "https://github.com/flotiq/flotiq-ui-plugin-content-publishing",
+  "url": "https://my-app-nextjs-psi.vercel.app/plugin/index.js",
+  "permissions": [
+    {
+      "type": "CO",
+      "canRead": true
+    }
+  ]
+}

@@ -26,6 +26,7 @@ export default async function PostPage() {
    * Otherwise, show blogpost content for the first matching blogpost
    */
   return <div>
+    <div className={"mb-4 pb-4 border-b border-gray-800"}>
     {isEnabled ? (
       <p className="text-sm text-red-500">You are browsing in Draft Mode</p>
     ) : (
@@ -33,12 +34,14 @@ export default async function PostPage() {
         You are browsing only Published content
       </p>
     )}
+    </div>
     <Link href={`/`} className="text-blue-500 hover:underline mb-2 inline-block">
       ← Back to home
     </Link>
+    <div className={"grid grid-cols-1 gap-4"}>
     { (content.data.map((blogpost) => (
       <Link href={`/blogpost/${blogpost.slug}`} key={blogpost.id}>
-        <h1 className="text-4xl font-bold mb-2">{blogpost.title}</h1>
+        <h1 className="text-2xl font-bold mb-2">{blogpost.title}</h1>
         <div className="flex gap-4 my-2">
           {blogpost.headerImage?.length ? (
             <Image
@@ -51,7 +54,9 @@ export default async function PostPage() {
         </div>
       </Link>
       ))
+
   )
     }
+    </div>
   </div>
 }

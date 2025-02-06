@@ -34,13 +34,15 @@ export default async function PostPage({
   const blogpost = content.data[0];
   return (
     <div>
-      {isEnabled ? (
-        <p className="text-sm text-red-500">You are browsing in Draft Mode</p>
-      ) : (
-        <p className="text-sm text-green-500">
-          You are browsing only Published content
-        </p>
-      )}
+      <div className={"mb-4 pb-4 border-b border-gray-800"}>
+        {isEnabled ? (
+          <p className="text-sm text-red-500">You are browsing in Draft Mode</p>
+        ) : (
+          <p className="text-sm text-green-500">
+            You are browsing only Published content
+          </p>
+        )}
+      </div>
       <Link href={`/blogpost`} className="text-blue-500 hover:underline mb-2 inline-block">
         ← Back to posts
       </Link>
