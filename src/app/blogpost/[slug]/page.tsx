@@ -48,7 +48,7 @@ export default async function PostPage({
       </Link>
       <h1 className="text-4xl font-bold mb-2">{blogpost.title}</h1>
 
-      <div className="flex gap-4 my-2">
+      <div>
         {blogpost.headerImage?.length ? (
           <Image
             alt={blogpost.headerImage[0].alt || ""}
@@ -57,8 +57,8 @@ export default async function PostPage({
             height={100}
           />
         ) : null}
-        <p className={"mb-6"}>{blogpost.excerpt}</p>
-        <div className={"prose"}>{blogpost.excerpt}</div>
+        <div className={"mb-6"}><p>{blogpost.excerpt}</p></div>
+        <div className={"prose"} dangerouslySetInnerHTML={{ __html: blogpost.content }} />
       </div>
     </div>
   );

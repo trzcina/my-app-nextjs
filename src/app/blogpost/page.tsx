@@ -51,6 +51,7 @@ export default async function PostPage() {
               height={100}
             />
           ) : null}
+          <p>{blogpost.excerpt}</p>
         </div>
       </Link>
       ))
