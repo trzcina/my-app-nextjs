@@ -57,7 +57,8 @@ export default async function PostPage({
             height={100}
           />
         ) : null}
-        <p>{blogpost.excerpt}</p>
+        <p className={"mb-6"}>{blogpost.excerpt}</p>
+        <div className={"prose"}>{blogpost.excerpt}</div>
       </div>
     </div>
   );
