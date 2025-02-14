@@ -53,8 +53,8 @@ export default async function PostPage({
           <Image
             alt={blogpost.headerImage[0].alt || ""}
             src={flotiqApiClient.helpers.getMediaUrl(blogpost.headerImage[0])}
-            width={100}
-            height={100}
+            width={600}
+            height={350}
           />
         ) : null}
         <div className={"mb-6"}><p>{blogpost.excerpt}</p></div>

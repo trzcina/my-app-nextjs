@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "api.flotiq.com",
+        hostname: "flotiq-backend-972-mr-599.dev.cdwv.pl",
         port: "",
         pathname: "/image/**",
       },
